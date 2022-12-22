@@ -8,6 +8,11 @@ const gameOutcome = {
     loose: -1,
     draw: 0
 }
+const gameOutcomePoints = {
+    win: 1,
+    loose: 0,
+    draw: 0
+}
 const gameOutcomeToMessage = {
     [gameOutcome.win]: 'win',
     [gameOutcome.draw]: 'draw',
@@ -29,10 +34,12 @@ const rules = {
         [choices.paper]: gameOutcome.win,
         [choices.scissors]: gameOutcome.draw
     },
-
 }
 
 const predAndMessage = [[(score) => score > 0, 'You win!'], [(score) => score < 0, 'You loose!'], [(score) => score === 0, 'Draw!']];
+
+const playerScoreDiv = document.querySelector('#player_points');
+const computerScoreDiv = document.querySelector('#computer_points');
 
 const choicesToGameOutcome = (a, b) => rules[a][b];
 
@@ -66,17 +73,17 @@ function game() {
 
 //console.log(game());
 
-// function playRound(computerSelection) {
-//     const playerSelection = capitalize(prompt('Rock, Paper or Scissors?'));
-//     const outcome = choicesToGameOutcome(playerSelection, computerSelection);
-//     console.log(gameOutcomeToMessage[outcome]);
-//     return outcome;
-// }
+function playRound(playerSelection, computerSelection) {
+    const outcome = choicesToGameOutcome(playerSelection, computerSelection);
+
+    console.log(gameOutcomeToMessage[outcome]);
+    return outcome;
+}
 
 const btns = document.querySelectorAll('button');
 btns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
-        console.log(btn.id);
+        playRound(btn.id, getComputerChoice());
     });
 });
 
