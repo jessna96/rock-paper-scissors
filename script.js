@@ -32,7 +32,6 @@ const rules = {
 
 }
 
-//TESTCOMMENT
 const predAndMessage = [[(score) => score > 0, 'You win!'], [(score) => score < 0, 'You loose!'], [(score) => score === 0, 'Draw!']];
 
 const choicesToGameOutcome = (a, b) => rules[a][b];
@@ -65,14 +64,21 @@ function game() {
 
 }
 
-console.log(game());
+//console.log(game());
 
-function playRound(computerSelection) {
-    const playerSelection = capitalize(prompt('Rock, Paper or Scissors?'));
-    const outcome = choicesToGameOutcome(playerSelection, computerSelection);
-    console.log(gameOutcomeToMessage[outcome]);
-    return outcome;
-}
+// function playRound(computerSelection) {
+//     const playerSelection = capitalize(prompt('Rock, Paper or Scissors?'));
+//     const outcome = choicesToGameOutcome(playerSelection, computerSelection);
+//     console.log(gameOutcomeToMessage[outcome]);
+//     return outcome;
+// }
+
+const btns = document.querySelectorAll('button');
+btns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        console.log(btn.id);
+    });
+});
 
 function capitalize(string) {
     const lowerCaseStr = string.toLowerCase();

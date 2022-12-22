@@ -1,0 +1,29 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body, button {
+    font-family: Fantasy, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.button_container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    border-radius: 5px;
+    background-color: yellowgreen;
+    border: medium solid darkolivegreen;
+    padding: 1vh 2vh;
+    font-size: 16px;
+}
