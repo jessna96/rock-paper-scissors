@@ -31,6 +31,8 @@ const rules = {
     },
 
 }
+
+//TESTCOMMENT
 const predAndMessage = [[(score) => score > 0, 'You win!'], [(score) => score < 0, 'You loose!'], [(score) => score === 0, 'Draw!']];
 
 const choicesToGameOutcome = (a, b) => rules[a][b];
