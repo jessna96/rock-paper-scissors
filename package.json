@@ -1,0 +1,23 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "JavaScript project from the Odin Project",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessna96/rock-paper-scissors.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessna96/rock-paper-scissors/issues"
+  },
+  "homepage": "https://github.com/jessna96/rock-paper-scissors#readme",
+  "dependencies": {
+    "ramda": "^0.28.0"
+  }
+}

@@ -18,14 +18,7 @@ h1, h2 {
     display: flex;
     justify-content: center;
     gap: 20px;
-}
-
-button {
-    border-radius: 5px;
-    background-color: yellowgreen;
-    border: medium solid darkolivegreen;
-    padding: 0.5em 1em;
-    font-size: 16px;
+    margin-top: 25px;
 }
 
 .score_overview {
@@ -45,6 +38,10 @@ button {
     gap: 10px;
 }
 
+.game_container {
+    display: block;
+}
+
 .game_result_container {
     display: none;
     justify-content: center;
@@ -52,10 +49,34 @@ button {
 }
 
 .game_result {
-    font-size: 24px;
+    font-size: 50px;
+}
+
+.current_result_container {
+    display: flex;
+    justify-content: center;
+}
+
+.blue_box {
     border-radius: 5px;
     background-color: lightblue;
     border: medium solid skyblue;
     padding: 0.5em 1em;
+}
+
+.dark_green_box {
+    border-radius: 5px;
+    background-color: yellowgreen;
+    border: medium solid darkolivegreen;
+    padding: 0.5em 1em;
+    font-size: 16px;
+}
+
+.red_box {
+    border-radius: 5px;
+    background-color: indianred;
+    border: medium solid darkred;
+    padding: 0.5em 1em;
+    font-size: 16px;
 }
 
