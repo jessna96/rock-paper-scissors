@@ -125,6 +125,7 @@ const render = (gameState) => {
     const resetBtn = document.querySelector('#reset_btn');
     resetBtn.addEventListener('click', () => {
         gameState = [];
+        console.log('test');
         render(gameState);
     });
 }
